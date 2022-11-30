@@ -23,7 +23,14 @@ public class PayByPaypal implements PaymentStrategy{
 
     @Override
     public boolean pay(int amount) {
-        return false;
+        if (authentication){
+            System.out.println("paiement effectuer : ");
+            return  true;
+        }
+        else {
+            return false;
+        }
+
     }
 
     private boolean verification(){
@@ -52,5 +59,8 @@ public class PayByPaypal implements PaymentStrategy{
             
         }
 
+
     }
+
+
 }
