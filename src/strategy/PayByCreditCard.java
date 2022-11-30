@@ -7,4 +7,9 @@ public class PayByCreditCard implements PaymentStrategy{
     public boolean pay(int amount) {
         return false;
     }
+
+    @Override
+    public void collectPaymentInformation() {
+
+    }
 }
